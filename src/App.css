@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+input {
+  width: 100vw;
+  margin: 1rem 0;
+}
+
+.pokeContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokeCard {
+  width: 50vw;
+}
+
+.quadx {
+  background-color: red;
+  border-radius: 3px;
+  color: white;
+}
+
+.doublex {
+  background-color: orange;
+  border-radius: 3px;
+  color: white;
+}
+
+.normalx {
+  background-color: yellow;
+  border-radius: 3px;
+  color: white;
+}
+
+.halfx {
+  background-color: green;
+  border-radius: 3px;
+  color: white;
+}
+
+.quarterx {
+  background-color: blue;
+  border-radius: 3px;
+  color: white;
+}
+
+.nox {
+  background-color: black;
+  border-radius: 3px;
+  color: white;
+}
+
+/* #fire {
+  background-color: red;
+} */
