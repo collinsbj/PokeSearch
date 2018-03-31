@@ -7,29 +7,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allPokemonNames: [],
-      currentPokemon: 0,
       pokemon: [],
       visiblePokemon: []
     };
-
-    this.getAllPokemon = this.getAllPokemon.bind(this);
     this.searchOnChangeHandler = this.searchOnChangeHandler.bind(this);
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000")
-      .then(response => response.json())
-      .then(response => {
-        this.setState({
-          allPokemonNames: response
-        });
-        this.getAllPokemon();
-      })
-      .catch(err => console.log(err));
-  }
-
-  getAllPokemon() {
     fetch("https://pokesearchbe.herokuapp.com/")
       .then(response => response.json())
       .then(response => {
@@ -43,7 +27,7 @@ class App extends Component {
 
   searchOnChangeHandler(event) {
     var newVisiblePokemon = this.state.pokemon.filter(pokemon => {
-      return pokemon.name.includes(event.target.value);
+      return pokemon.name.includes(event.target.value.toLowerCase());
     });
     this.setState({
       visiblePokemon: newVisiblePokemon
