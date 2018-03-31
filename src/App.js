@@ -42,7 +42,7 @@ class App extends Component {
           <input placeholder="search" onChange={this.searchOnChangeHandler} />
           <div className="pokeContainer">
             {this.state.visiblePokemon.map(element => {
-              return element.hidden === false && <Pokemon data={element} />;
+              return element.hidden === false && <Pokemon key={element.name} data={element} />;
             })}
           </div>
         </header>
